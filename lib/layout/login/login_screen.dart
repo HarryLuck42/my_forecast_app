@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset('${AssetPath.image}login_logo.png', fit: BoxFit.contain,),
+                  Image.asset('${AssetPath.image}splash_image.png', fit: BoxFit.contain, width: 200, height: 200,),
                   thirtyPx,
                   Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -97,10 +97,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       const Spacer(),
                       TextButton(
                         onPressed: () {
-                         ref.routing.move(Routes.forgotPassword);
+                         // ref.routing.move(Routes.forgotPassword);
+                          ref.isLogin = !ref.isLogin;
                         },
                         child: Text(
-                          'Forgot Password?',
+                          ref.isLogin ? 'Do you want to register?' : 'Login',
                           style: context.getTheme().textTheme.bodyLarge,
                         ),
                       ),
@@ -116,10 +117,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         foregroundColor: MaterialStateProperty.all<Color>(context.getTheme().colorScheme.primary),
                         shadowColor: MaterialStateProperty.all<Color>(context.getTheme().colorScheme.primary)),
                     function: () {
-                      ref.loginApp();
+                      if(ref.isLogin){
+                        ref.loginApp(context);
+                      }else{
+                        ref.registerApp(context);
+                      }
+
                     },
                     child: CustomText(
-                      textToDisplay: 'Login',
+                      textToDisplay: ref.isLogin ? 'Login' : 'Register',
                       textStyle: context.getTheme().textTheme.button?.copyWith(color: Colors.white),
                     ),
                   )

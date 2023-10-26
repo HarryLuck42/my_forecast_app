@@ -27,6 +27,14 @@ extension StringDefine on String{
     return split('/').last;
   }
 
+  bool isEmail(){
+    final pattern = r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$';
+    final regExp = RegExp(pattern);
+
+    // Use the `hasMatch` method to check if the email matches the pattern
+    return regExp.hasMatch(this);
+  }
+
   String convert(String format){
     return DateFormat(format).format(DateTime.parse(this));
   }

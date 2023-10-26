@@ -19,11 +19,11 @@ class _SplashScreenState extends State<SplashScreen> with BaseState{
       body: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 16),
-              child: Image.asset('${AssetPath.image}splash_image.png')),
+              child: Image.asset('${AssetPath.image}splash_image.png', height: 150, width: 150,)),
           const CustomText(textToDisplay: 'My Weather App')
         ],
       ),

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "772587746701",
+    "project_id": "weather-app-da37d",
+    "storage_bucket": "weather-app-da37d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772587746701:android:1b3cf4a1ed53591a95b9c4",
+        "android_client_info": {
+          "package_name": "corp.lukman.my_forecast_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXudmG2WYzP5uHweqKkg6STDTi8hWVJ7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

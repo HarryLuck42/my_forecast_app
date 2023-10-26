@@ -1,7 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:my_forecast_app/core/base/base_provider.dart';
 import 'package:my_forecast_app/core/extention/extention.dart';
+import 'package:my_forecast_app/core/routing/routes.dart';
 import 'package:my_forecast_app/model/response/forecast_response.dart';
 
 import '../../service/api_handling.dart';
@@ -73,6 +75,12 @@ class HomeProvider extends BaseProvider{
     }).catchError((e) {
       setLoading(false);
       debugPrint(e);
+    });
+  }
+
+  logout(){
+    FirebaseAuth.instance.signOut().then((value){
+      routing.moveReplacement(Routes.login);
     });
   }
 }
