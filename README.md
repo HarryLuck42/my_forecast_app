@@ -1,6 +1,13 @@
-# my_forecast_app
+# How to install my forecast app
 
-A new Flutter project.
+There are 3 ways to install the app
+1st you can run instantly in Android Studio
+![image](https://github.com/HarryLuck42/my_forecast_app/assets/36653446/a83edf70-f161-49df-9dac-7514dfa5a534)
+But you must check the dart class which can run the app. like void main();
+2nd you can run in terminal
+![image](https://github.com/HarryLuck42/my_forecast_app/assets/36653446/521bbdec-f328-413c-85b2-f0354502c0b0)
+3rd you can install from apk, here the link to download the apk that you can install the app:
+[Download the apk](https://drive.google.com/file/d/1D7fl-Vg5A1zsmAYHSpAVhQhwjcdYvXFf/view?usp=drive_link)
 
 ## Getting Started
 
